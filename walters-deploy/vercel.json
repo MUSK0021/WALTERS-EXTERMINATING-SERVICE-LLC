@@ -1,0 +1,83 @@
+{
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-a8M1mjIFgZAi5/RemYaZIYXbZtqm1d1C3HTiNawg+oQ='; font-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/id1.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/id2.html",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/id72.html",
+      "destination": "/bed-bugs/",
+      "permanent": true
+    },
+    {
+      "source": "/id21.html",
+      "destination": "/what-it-costs/",
+      "permanent": true
+    },
+    {
+      "source": "/id17.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/id4.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/id70.html",
+      "destination": "/pictures/",
+      "permanent": true
+    }
+  ]
+}
